@@ -1,0 +1,7 @@
+<div *ngFor="let message of webService.messages | async"> 
+  <mat-card class="card">
+    <mat-card-title [routerLink]="['/messages', message.owner]" style="cursor: pointer"> {{message.owner}}</mat-card-title> <mat-card-content>sent: {{message.text}}</mat-card-content> 
+   </mat-card>
+ </div>
+ 
+ <button mat-button>Click me</button>
